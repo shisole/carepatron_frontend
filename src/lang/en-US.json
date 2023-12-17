@@ -1,0 +1,23 @@
+{
+  "client_modal.title_contact_details": "Contact details",
+  "client_modal.title_personal_details": "Personal details",
+  "client_modal_create.continue_btn": "continue",
+  "client_modal_create.create_new_client_title": "Create new client",
+  "client_modal_create.submit_back": "back",
+  "client_modal_create.submit_btn": "submit",
+  "client_modal_create.user_email": "Email",
+  "client_modal_create.user_firstname": "First Name",
+  "client_modal_create.user_lastname": "Last Name",
+  "client_modal_create.user_phone_number": "Phone number",
+  "client_table.create_client_btn": "Create new client",
+  "client_table.phoneNumber": "{phoneNumber}",
+  "client_table.title": "Clients",
+  "client_table.th_name": "Name",
+  "client_table.th_phone": "Phone",
+  "client_table.th_email": "Email",
+  "client_modal_create.client_form_error_firstName": "Required",
+  "client_modal_create.client_form_error_lastName": "Required",
+  "client_modal_create.client_form_error_email": "Invalid email address",
+  "client_modal_create.client_form_error_phone": "Invalid phone number"
+
+}

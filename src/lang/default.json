@@ -1,0 +1,62 @@
+{
+  "client_modal.title_contact_details": {
+    "defaultMessage": "Contact details"
+  },
+  "client_modal.title_personal_details": {
+    "defaultMessage": "Personal details"
+  },
+  "client_modal_create.continue_btn": {
+    "defaultMessage": "continue"
+  },
+  "client_modal_create.create_new_client_title": {
+    "defaultMessage": "Create new client"
+  },
+  "client_modal_create.submit_back": {
+    "defaultMessage": "back"
+  },
+  "client_modal_create.submit_btn": {
+    "defaultMessage": "submit"
+  },
+  "client_modal_create.user_email": {
+    "defaultMessage": "Email"
+  },
+  "client_modal_create.user_firstname": {
+    "defaultMessage": "First Name"
+  },
+  "client_modal_create.user_lastname": {
+    "defaultMessage": "Last Name"
+  },
+  "client_modal_create.user_phone_number": {
+    "defaultMessage": "Phone number"
+  },
+  "client_table.create_client_btn": {
+    "defaultMessage": "Create new client"
+  },
+  "client_table.phoneNumber": {
+    "defaultMessage": "{phoneNumber}"
+  },
+  "client_table.title": {
+    "defaultMessage": "Clients"
+  },
+  "client_table.th_name": {
+    "defaultMessage": "Name"
+  },
+  "client_table.th_phone": {
+    "defaultMessage": "Phone"
+  },
+  "client_table.th_email": {
+    "defaultMessage": "Email"
+  },
+  "client_modal_create.client_form_error_firstName": {
+    "defaultMessage": "Required"
+  },
+  "client_modal_create.client_form_error_lastName": {
+    "defaultMessage": "Required"
+  },
+  "client_modal_create.client_form_error_email": {
+    "defaultMessage": "Invalid email address"
+  },
+  "client_modal_create.client_form_error_phone": {
+    "defaultMessage": "Invalid phone number"
+  }
+}

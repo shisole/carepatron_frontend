@@ -35,7 +35,7 @@ const DialogWrapper = styled.div`
 `
 
 const dialogTitle = <FormattedMessage 
-    id="client_table.create_new_client_title"
+    id="client_modal_create.create_new_client_title"
     defaultMessage={"Create new client"}
 />;
 
@@ -82,29 +82,6 @@ const StepIcon = styled.div<{ $active: boolean, $disabled: boolean, $complete: b
     `}
 `;
 
-type InputType = "textfield" | "radio"
-
-interface StepperProp extends HTMLAttributes<HTMLDivElement> {
-    pages: StepperPage[];
-}
-
-type StepperPage = {
-    title: string;
-    fields: CustomInputFields[];
-};
-
-type CustomInputFields = {
-    inputName: string;
-    inputLabel?: string;
-    inputType: InputType;
-    inputValue?: string;
-};
-
-const InputMap = {
-    textfield: TextField,
-    radio: TextField
-}
-
 const FormField = styled.div`
     width: 100%;
     margin-bottom: 10px;
@@ -129,6 +106,31 @@ const StepperWrapper = styled.div`
     width: 100%;
     height: 100%;
 `
+
+type InputType = "textfield" | "radio"
+
+interface StepperProp extends HTMLAttributes<HTMLDivElement> {
+    pages: StepperPage[];
+}
+
+type StepperPage = {
+    title: string | React.ReactNode;
+    fields: CustomInputFields[];
+};
+
+type CustomInputFields = {
+    inputName: string;
+    inputLabel?: string | React.ReactNode;
+    inputType: InputType;
+    inputValue?: string;
+};
+
+const InputMap = {
+    textfield: TextField,
+    radio: TextField
+}
+
+
 const Stepper: React.FC<StepperProp> = ({ pages }) => {
     const dispatch = useDispatch();
     const clientModal = useClientModalContext();
@@ -213,7 +215,7 @@ const Stepper: React.FC<StepperProp> = ({ pages }) => {
                 onBlur={formik.handleBlur}
                 error={formik.errors[field.inputName] && (
                     <DynamicFormattedMessage
-                        id={`client_form_error.${field.inputName}`}
+                        id={`client_modal_create.client_form_error_${field.inputName}`}
                         defaultMessage={formik.errors[field.inputName]}
                     />
                 )}
@@ -223,9 +225,20 @@ const Stepper: React.FC<StepperProp> = ({ pages }) => {
             })
         }
         <CTAButtonWrapper>
-            {!isFirstStep && <Button onClick={handlePrev}>Back</Button>}
+            {!isFirstStep && <Button onClick={handlePrev}><FormattedMessage
+                    id={`client_modal_create.submit_back`}
+                    defaultMessage={"back"}
+                /></Button>}
             <Button onClick={handleNextAndSubmit} $variant='primary'>
-                {isLastStep ? 'submit' : 'continue'}
+                {isLastStep ? 
+                <FormattedMessage
+                    id={`client_modal_create.submit_btn`}
+                    defaultMessage={"submit"}
+                />
+                 : <FormattedMessage
+                    id={`client_modal_create.continue_btn`}
+                    defaultMessage={"continue"}
+                />}
             </Button>
         </CTAButtonWrapper>
     </form>
@@ -236,34 +249,52 @@ const CreateClientForm = () => {
     const createClientJSON = {
         pages: [
             {
-                title: "Personal details",
+                title: <FormattedMessage 
+                    id={`client_modal.title_personal_details`}
+                    defaultMessage={"Personal details"}
+                />,
                 fields: [
                     {
                         inputName: "firstName",
-                        inputLabel: "First Name",
+                        inputLabel: <FormattedMessage
+                            id={`client_modal_create.user_firstname`}
+                            defaultMessage={"First Name"}
+                        />,
                         inputType: "textfield",
                         inputValue: ""
                     },
                     {
                         inputName: "lastName",
-                        inputLabel: "Last Name",
+                        inputLabel: <FormattedMessage
+                            id={`client_modal_create.user_lastname`}
+                            defaultMessage={"Last Name"}
+                        />,
                         inputType: "textfield",
                         inputValue: ""
                     }
                 ] as CustomInputFields[]
             },
             {
-                title: "Contact details",
+                title: <FormattedMessage 
+                    id={`client_modal.title_contact_details`}
+                    defaultMessage={"Contact details"}
+                />,
                 fields: [
                     {
                         inputName: "email",
-                        inputLabel: "Email",
+                        inputLabel: <FormattedMessage
+                            id={`client_modal_create.user_email`}
+                            defaultMessage={"Email"}
+                        />,
                         inputType: "textfield",
                         inputValue: ""
                     },
                     {
                         inputName: "phone",
-                        inputLabel: "Phone number",
+                        inputLabel: <FormattedMessage
+                            id={`client_modal_create.user_phone_number`}
+                            defaultMessage={"Phone number"}
+                        />,
                         inputType: "textfield",
                         inputValue: ""
                     }

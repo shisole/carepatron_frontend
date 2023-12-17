@@ -1,0 +1,22 @@
+{
+  "client_modal.title_contact_details": "Coordonnées",
+  "client_modal.title_personal_details": "Détails personnels",
+  "client_modal_create.continue_btn": "continuer",
+  "client_modal_create.create_new_client_title": "Créer un nouveau client",
+  "client_modal_create.submit_back": "retour",
+  "client_modal_create.submit_btn": "envoyer",
+  "client_modal_create.user_email": "E-mail",
+  "client_modal_create.user_firstname": "Prénom",
+  "client_modal_create.user_lastname": "Nom de famille",
+  "client_modal_create.user_phone_number": "Numéro de téléphone",
+  "client_table.create_client_btn": "Créer un nouveau client",
+  "client_table.phoneNumber": "{phoneNumber}",
+  "client_table.title": "Clients",
+  "client_table.th_name": "Nom",
+  "client_table.th_phone": "Téléphone",
+  "client_table.th_email": "E-mail",
+  "client_modal_create.client_form_error_firstName": "Requis",
+  "client_modal_create.client_form_error_lastName": "Requis",
+  "client_modal_create.client_form_error_email": "Adresse e-mail invalide",
+  "client_modal_create.client_form_error_phone": "Numéro de téléphone invalide"
+}

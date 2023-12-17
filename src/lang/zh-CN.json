@@ -1,0 +1,22 @@
+{
+  "client_modal.title_contact_details": "联系方式",
+  "client_modal.title_personal_details": "个人资料",
+  "client_modal_create.continue_btn": "继续",
+  "client_modal_create.create_new_client_title": "创建新客户",
+  "client_modal_create.submit_back": "返回",
+  "client_modal_create.submit_btn": "提交",
+  "client_modal_create.user_email": "电子邮件",
+  "client_modal_create.user_firstname": "名字",
+  "client_modal_create.user_lastname": "姓氏",
+  "client_modal_create.user_phone_number": "电话号码",
+  "client_table.create_client_btn": "创建新客户",
+  "client_table.phoneNumber": "{phoneNumber}",
+  "client_table.title": "客户",
+  "client_table.th_name": "姓名",
+  "client_table.th_phone": "电话",
+  "client_table.th_email": "电子邮件",
+  "client_modal_create.client_form_error_firstName": "必填",
+  "client_modal_create.client_form_error_lastName": "必填",
+  "client_modal_create.client_form_error_email": "无效的电子邮件地址",
+  "client_modal_create.client_form_error_phone": "无效的电话号码"
+}
