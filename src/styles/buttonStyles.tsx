@@ -29,7 +29,11 @@ const buttonStyles = {
             ${defaultButtonStyles};
             background-color: ${({ theme }) => theme.colors.gray};
             color: ${({ theme }) => theme.colors.white}
-
+        `,
+        clear: css`
+            ${defaultButtonStyles};
+            background-color: unset;
+            padding: unset;
         `
     }
 }

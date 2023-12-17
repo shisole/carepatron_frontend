@@ -14,6 +14,7 @@ import French from './lang/fr-FR.json';
 import Chinese from './lang/zh-CN.json';
 import Japanese from './lang/jp-JP.json';
 import styled from 'styled-components';
+import { breakpoints } from "./styles/theme";
 
 const navigatorLocale = navigator.language;
 
@@ -45,6 +46,11 @@ const LocaleFlagsWrapper = styled.div`
   position: absolute;
   bottom: 2%;
   left: 5%;
+
+
+  @media(max-width: ${breakpoints.tablet}) {
+    left: 40%;
+  }
 `;
 
 const LocaleFlagSelector = styled.select`

@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from "react";
 import { styled } from "styled-components"
 
 
-type ButtonVariants = "default" | "primary" | "secondary";
+type ButtonVariants = "default" | "primary" | "secondary" | "clear";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     $variant?: ButtonVariants;

@@ -9,7 +9,9 @@ import Button from '../Button';
 import { addClient } from '../../slices/clients';
 import { ClientInfo } from '../../types/Client';
 import { useFormik } from 'formik'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { breakpoints } from "../../styles/theme";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const DynamicFormattedMessage = FormattedMessage;
 
@@ -19,11 +21,13 @@ const DialogStyles = css`
     width: 350px;
     border: 2px solid ${({ theme }) => theme.colors.lighterGray};
     border-radius: 8px;
+    top: 64px;
 
     @media(max-width: ${breakpoints.tablet}) {
         width: 100%;
         height: 100%;
         top: 0;
+        padding: 10px 25px;
     }
 `;
 
@@ -105,6 +109,18 @@ const StepperWrapper = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
+`
+
+const BackButton = styled(Button).attrs({ $variant: 'clear' })`
+    color: ${({ theme }) => theme.colors.brightBlue };
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: unset;
+`;
+
+const BackIconWrapper = styled.div`
+    margin-right: 5px;
 `
 
 type InputType = "textfield" | "radio"
@@ -225,10 +241,10 @@ const Stepper: React.FC<StepperProp> = ({ pages }) => {
             })
         }
         <CTAButtonWrapper>
-            {!isFirstStep && <Button onClick={handlePrev}><FormattedMessage
+            {!isFirstStep && <BackButton onClick={handlePrev}><BackIconWrapper><FontAwesomeIcon icon={faArrowLeft}/></BackIconWrapper><FormattedMessage
                     id={`client_modal_create.submit_back`}
                     defaultMessage={"back"}
-                /></Button>}
+                /></BackButton>}
             <Button onClick={handleNextAndSubmit} $variant='primary'>
                 {isLastStep ? 
                 <FormattedMessage
@@ -310,7 +326,7 @@ const ClientsModal = () => {
     const modalContext = useClientModalContext();
     return <Modal
         isOpen={modalContext?.modalState.isModalOpen ?? false}
-        dialogStyles={JSON.stringify(DialogStyles)}
+        dialogStyles={DialogStyles}
         dialogTitle={dialogTitle}
         onClose={modalContext?.closeModal}
     >

@@ -1,8 +1,7 @@
 import { HTMLAttributes } from 'react';
-import { styled } from 'styled-components';
+import { CSSProp, styled } from 'styled-components';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { breakpoints } from "../../styles/theme";
 
 const ModalWrapper = styled.div`
     display: flex;
@@ -14,7 +13,7 @@ const ModalWrapper = styled.div`
     right: 0;
     bottom: 0;
 `
-type DialogStyles = string;
+type DialogStyles = CSSProp;
 type DialogTitle = string | React.ReactNode;
 
 const Dialog = styled.div<{ $dialogStyles?: DialogStyles }>`
@@ -26,7 +25,6 @@ const Dialog = styled.div<{ $dialogStyles?: DialogStyles }>`
     overflow: auto;
     padding: 25px;
     margin: 0;
-    top: 64px;
     
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
@@ -34,12 +32,6 @@ const Dialog = styled.div<{ $dialogStyles?: DialogStyles }>`
         margin-bottom: 25px
     }
 
-
-
-    @media(max-width: ${breakpoints.tablet}) {
-        top: 0;
-        padding: 10px 25px;
-    }
 
     ${({ $dialogStyles }) => $dialogStyles}
 `;
@@ -54,7 +46,7 @@ interface Modal extends HTMLAttributes<HTMLDivElement> {
 
 const Modal: React.FC<Modal> = (props) => {
     return props.isOpen && <ModalWrapper>
-        <Dialog $dialogStyles={props.dialogStyles && JSON.parse(props.dialogStyles)}>
+        <Dialog $dialogStyles={props.dialogStyles}>
             <DialogHeader onClose={props.onClose} headerTitle={props.dialogTitle}/>
             {props.children}
         </Dialog>
