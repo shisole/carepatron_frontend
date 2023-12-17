@@ -1,26 +1,28 @@
+import { TableHTMLAttributes } from "react";
 import { styled } from "styled-components";
-import TableRow from "../TableRow";
-// import { ClientInfo, Client } from "../../types/Client";
+
+const TableBodyWrapper = styled.tbody`
+    ${({ theme }) => theme.componentStyles.table.tableBody}
+`;
+
+interface TableBody extends TableHTMLAttributes<HTMLTableSectionElement> {}
+
+const TableBody: React.FC<TableBody> = ({ children, ...rest }) => (<TableBodyWrapper {...rest}>{children}</TableBodyWrapper>)
 
 
-interface TableData {
-    [key: string]: string | number | boolean | null
-}
-
-interface TableBodyProps {
-    data: Array<TableData>,
-    tableKeys: Array<string>    
-}
-
-const TableCell = styled.td`
-    ${({ theme }) => theme.componentStyles.table.tableCell}
-`
-
-
-const TableBody: React.FC<TableBodyProps> = ({ data, tableKeys }: TableBodyProps) => {
-    return data.map((tableData, index) => <TableRow key={index}>
-        {tableKeys.map((tableKey) => <TableCell key={tableKey}>{tableData[tableKey]}</TableCell>)}
-    </TableRow>)
-}
+// const TableBody = <T extends Record<string, GenericValue>>({ data, tableKeys }: TableBodyProps<T>) => {
+//     return <TableBodyWrapper>
+//         {
+//             data.map((tableData, index) =>
+//                 <TableRow key={index}>
+//                     {tableKeys.map((tableKey) =>
+//                             <TableCell key={tableKey}>
+//                                 {tableData[tableKey]}
+//                             </TableCell>)}
+//                 </TableRow>
+//             )
+//         }
+//     </TableBodyWrapper>
+// }
 
 export default TableBody;

@@ -1,15 +1,12 @@
+import { TableHTMLAttributes } from "react";
 import { styled } from "styled-components"
-
-interface TableRowProps {
-    children?: React.ReactNode
-}
 
 const TableRowWrapper = styled.tr`
     ${({ theme }) => theme.componentStyles.table.tableRow}
 `;
 
-const TableRow = ({ children }: TableRowProps) => {
-    return <TableRowWrapper>{children}</TableRowWrapper>
-}
+interface TableRow extends TableHTMLAttributes<HTMLTableRowElement> {}
+
+const TableRow: React.FC<TableRow> = ({ children, ...rest }) => <TableRowWrapper {...rest}>{children}</TableRowWrapper>
 
 export default TableRow;
