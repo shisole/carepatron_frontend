@@ -1,7 +1,9 @@
 export interface ClientInfo {
-    name: string,
+    firstName: string,
+    lastName: string,
     phone?: string,
-    email?: string
+    email?: string,
+    [key: string]: string | undefined
 }
 
 export type Client = "name" | "phone" | "email";
