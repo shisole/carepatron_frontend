@@ -1,0 +1,22 @@
+{
+  "client_modal.title_contact_details": "Detalles de contacto",
+  "client_modal.title_personal_details": "Detalles personales",
+  "client_modal_create.continue_btn": "continuar",
+  "client_modal_create.create_new_client_title": "Crear nuevo cliente",
+  "client_modal_create.submit_back": "atrás",
+  "client_modal_create.submit_btn": "enviar",
+  "client_modal_create.user_email": "Correo electrónico",
+  "client_modal_create.user_firstname": "Nombre",
+  "client_modal_create.user_lastname": "Apellido",
+  "client_modal_create.user_phone_number": "Número de teléfono",
+  "client_table.create_client_btn": "Crear nuevo cliente",
+  "client_table.phoneNumber": "{phoneNumber}",
+  "client_table.title": "Clientes",
+  "client_table.th_name": "Nombre",
+  "client_table.th_phone": "Teléfono",
+  "client_table.th_email": "Correo electrónico",
+  "client_modal_create.client_form_error_firstName": "Requerido",
+  "client_modal_create.client_form_error_lastName": "Requerido",
+  "client_modal_create.client_form_error_email": "Dirección de correo electrónico no válida",
+  "client_modal_create.client_form_error_phone": "Número de teléfono no válido"
+}

@@ -1,0 +1,22 @@
+{
+  "client_modal.title_contact_details": "Kontaktdetails",
+  "client_modal.title_personal_details": "Persönliche Angaben",
+  "client_modal_create.continue_btn": "weiter",
+  "client_modal_create.create_new_client_title": "Neuen Kunden erstellen",
+  "client_modal_create.submit_back": "zurück",
+  "client_modal_create.submit_btn": "senden",
+  "client_modal_create.user_email": "E-Mail",
+  "client_modal_create.user_firstname": "Vorname",
+  "client_modal_create.user_lastname": "Nachname",
+  "client_modal_create.user_phone_number": "Telefonnummer",
+  "client_table.create_client_btn": "Neuen Kunden erstellen",
+  "client_table.phoneNumber": "{phoneNumber}",
+  "client_table.title": "Kunden",
+  "client_table.th_name": "Name",
+  "client_table.th_phone": "Telefon",
+  "client_table.th_email": "E-Mail",
+  "client_modal_create.client_form_error_firstName": "Erforderlich",
+  "client_modal_create.client_form_error_lastName": "Erforderlich",
+  "client_modal_create.client_form_error_email": "Ungültige E-Mail-Adresse",
+  "client_modal_create.client_form_error_phone": "Ungültige Telefonnummer"
+}

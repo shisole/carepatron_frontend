@@ -1,0 +1,22 @@
+{
+  "client_modal.title_contact_details": "連絡先の詳細",
+  "client_modal.title_personal_details": "個人の詳細",
+  "client_modal_create.continue_btn": "続ける",
+  "client_modal_create.create_new_client_title": "新しいクライアントを作成する",
+  "client_modal_create.submit_back": "戻る",
+  "client_modal_create.submit_btn": "送信する",
+  "client_modal_create.user_email": "メールアドレス",
+  "client_modal_create.user_firstname": "名前",
+  "client_modal_create.user_lastname": "姓",
+  "client_modal_create.user_phone_number": "電話番号",
+  "client_table.create_client_btn": "新しいクライアントを作成する",
+  "client_table.phoneNumber": "{phoneNumber}",
+  "client_table.title": "クライアント",
+  "client_table.th_name": "名前",
+  "client_table.th_phone": "電話",
+  "client_table.th_email": "メール",
+  "client_modal_create.client_form_error_firstName": "必須",
+  "client_modal_create.client_form_error_lastName": "必須",
+  "client_modal_create.client_form_error_email": "無効なメールアドレス",
+  "client_modal_create.client_form_error_phone": "無効な電話番号"
+}

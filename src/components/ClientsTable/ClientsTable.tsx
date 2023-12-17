@@ -99,7 +99,7 @@ const ClientsTable = () => {
             <Table>
                 <Table.TableHead>
                     <Table.TableRow>
-                        {clientData.keys.map(key => <Table.TableHeaderCell key={key}>{key}</Table.TableHeaderCell>)}
+                        {clientData.keys.map(key => <Table.TableHeaderCell key={key}><FormattedMessage id={`client_table.th_${key}`} defaultMessage={key}/></Table.TableHeaderCell>)}
                     </Table.TableRow>
                 </Table.TableHead>
                 <Table.TableBody>
