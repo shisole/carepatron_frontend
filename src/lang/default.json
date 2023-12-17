@@ -58,5 +58,8 @@
   },
   "client_modal_create.client_form_error_phone": {
     "defaultMessage": "Invalid phone number"
+  },
+  "client_table_search.search_placeholder": {
+    "defaultMessage": "Search clients..."
   }
 }

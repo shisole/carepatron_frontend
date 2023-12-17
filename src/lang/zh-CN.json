@@ -18,5 +18,6 @@
   "client_modal_create.client_form_error_firstName": "必填",
   "client_modal_create.client_form_error_lastName": "必填",
   "client_modal_create.client_form_error_email": "无效的电子邮件地址",
-  "client_modal_create.client_form_error_phone": "无效的电话号码"
+  "client_modal_create.client_form_error_phone": "无效的电话号码",
+  "client_table_search.search_placeholder": "搜索客户..."
 }

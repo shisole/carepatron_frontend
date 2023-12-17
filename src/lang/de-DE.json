@@ -18,5 +18,6 @@
   "client_modal_create.client_form_error_firstName": "Erforderlich",
   "client_modal_create.client_form_error_lastName": "Erforderlich",
   "client_modal_create.client_form_error_email": "Ungültige E-Mail-Adresse",
-  "client_modal_create.client_form_error_phone": "Ungültige Telefonnummer"
+  "client_modal_create.client_form_error_phone": "Ungültige Telefonnummer",
+  "client_table_search.search_placeholder": "Kunden suchen..."
 }

@@ -3,11 +3,12 @@ import Table from '../Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { ClientInfo } from '../../types/Client';
 import Button from '../Button/Button';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import TextField from '../TextField';
 import { getFilteredClients, setSearchQuery, getClientsSearchQuery } from '../../slices/clients/clients';
 import { useClientModalContext } from '../../utils/ClientModalContext';
 import { breakpoints } from "../../styles/theme";
+import { defineMessages } from 'react-intl';
 
 
 const Wrapper = styled.div`
@@ -72,7 +73,15 @@ const getClientName = ({ firstName, lastName }: ClientNameProps): string => {
     return `${firstName} ${lastName}`;
 }
 
+const messages = defineMessages({
+    placeholder: {
+        id: 'client_table_search.search_placeholder',
+        defaultMessage: 'Search clients...',
+    },
+})
+
 const ClientsTable = () => {
+    const intl = useIntl();
     const dispatch = useDispatch();
     const clientModal = useClientModalContext();
     const clients: Array<ClientInfo> = useSelector(getFilteredClients);
@@ -86,7 +95,7 @@ const ClientsTable = () => {
         <TableWrapper>
             <TableTitle><FormattedMessage id={"client_table.title"} defaultMessage={"Clients"}/></TableTitle>
             <SearchWrapper>
-            <SearchBar placeholder='Search clients...' onChange={handleChange} value={searchQuery} />
+            <SearchBar placeholder={intl.formatMessage(messages.placeholder)} onChange={handleChange} value={searchQuery} />
             <Button $variant='primary' onClick={clientModal?.openModal}>
                 <TextLabel>
                     <FormattedMessage
