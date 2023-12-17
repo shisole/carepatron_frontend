@@ -19,4 +19,5 @@
   "client_modal_create.client_form_error_lastName": "Required",
   "client_modal_create.client_form_error_email": "Invalid email address",
   "client_modal_create.client_form_error_phone": "Invalid phone number"
+
 }
