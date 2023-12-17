@@ -1,20 +1,20 @@
+import { ButtonHTMLAttributes } from "react";
 import { styled } from "styled-components"
 
 
-type buttonVariants = "default" | "primary" | "secondary";
+type ButtonVariants = "default" | "primary" | "secondary";
 
-interface ButtonProps {
-    variant: buttonVariants,
-    text: string,
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    $variant?: ButtonVariants;
 }
 
-const StyledButton = styled.button<{ $variant?: string; }>`
-    ${({ $variant }) => $variant ?? 'default'}
+const StyledButton = styled.button<ButtonProps>`
+    ${({ $variant, theme }) => theme.buttonStyles.variants[$variant ?? 'default']}
 `
 
-const Button = (props: ButtonProps) => {
-    return <StyledButton $variant={props.variant}>
-        {props.text}
+const Button: React.FC<ButtonProps> = ({ children, $variant, onClick, ...rest}) => {
+    return <StyledButton $variant={$variant} onClick={onClick} {...rest}>
+        {children}
     </StyledButton>
 }
 
